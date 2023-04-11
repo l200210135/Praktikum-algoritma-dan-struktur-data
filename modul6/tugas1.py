@@ -1,3 +1,4 @@
+from mergeSort import mergeSort
 class MhsTif():
     def __init__(self,nama,jarak,nim,kota,uangsaku) -> None:
         self.nama = nama
@@ -15,4 +16,17 @@ c5 = MhsTif("shinomiya kaguya",25,"L200210136","boyolali",9999999999999)
 c6 = MhsTif("nopal",32,"L200210135",'wornogiri',3000)
 
 Daftar=[c0,c1,c2,c3,c4,c5,c6]
-nim =[]
+listnim=[]
+Daftartersort=[]
+for i in Daftar:
+    listnim.append(i.nim)
+for i in listnim:
+    for x in Daftar:
+        if i == x.nim:
+            Daftartersort.append(x)
+    
+mergeSort(listnim)
+print(Daftartersort)
+
+    
+                   
